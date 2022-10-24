@@ -1,5 +1,6 @@
-from pyexpat.errors import XML_ERROR_SYNTAX
 import xlsxwriter
+import os
+
 
 data = [
     {
@@ -8,6 +9,7 @@ data = [
         'contact': '+233-507-170-003',
         'email': 'nbaffy11@gmail.com',
         'address': 'E189, Burma Hills'
+
 
     }
 ]
@@ -28,6 +30,5 @@ for index, entry in enumerate(data):
     sheet.write(index+1, 3, entry['contact'])
     sheet.write(index+1, 4, entry['email'])
     sheet.write(index+1, 5, entry["address"])
-    
-
+    os.system('start Excel.EXE EmployeeId.xlsx')
 
